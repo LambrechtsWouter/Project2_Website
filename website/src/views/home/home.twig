@@ -1,0 +1,40 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'World Conqueror -  Browse' %}
+{% set css ='/css/home.css' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+<div class="container" id="content">
+  <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit clearfix">
+            	 <div class="span6">
+                	<h1>Photo<span id="home">Tour</span></h1>
+                	<p>is een fotozoektocht App voor Android, Windows Phone en Blackberry. Waarbij je met de hulp van een foto naar de juiste locatie moet begeven.</br>interessant voor Stadsrondleidingen of zoektocht voor jeugdbewegingen</p>
+               	 	<a class="btn btn-primary" href="../register">Registreer je nu</a>
+               	 	<a class=" btn btn-primary" " href="../routes">Bekijk alle Routes</a>
+               	 </div>
+                <div class="span4" id="phonegap">
+               		<img id="phonegap" src="../images/home.png">
+				</div>            
+            </div>
+
+            <!-- Example row of columns -->
+            <div class="row footer_element">
+                <div class="span9 app">
+                    <h3>Download de App voor volgende besturingsystemen</h3>
+                    <ul>
+                    <li id="bottom"><img id="icon" src="../img/Android.jpg"></li>
+                    <li id="bottom"><img id="icon" src="../img/windows-phone-logo.png"></li>
+                    <li id="bottom"><img id="icon" src="../img/logo.jpg"></li>
+                    </ul>
+                </div>
+                <div class="span2 qr">
+                	<img src="../img/chart.png">
+                </div>
+            </div>
+ </div>
+{% endblock %}

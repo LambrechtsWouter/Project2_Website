@@ -1,0 +1,17 @@
+{
+	"require": {
+		"silex/silex": "1.0.*@dev",
+                "twig/twig": "1.*",
+                "doctrine/dbal": "2.*",
+                "symfony/symfony": "2.2.*",
+                "symfony/http-kernel": ">=2.1.0, <= 2.2.99",
+                "knplabs/repository-service-provider": "dev-master",
+                "swiftmailer/swiftmailer": "4.3.*@dev"
+
+	},
+        "autoload": {
+		"psr-0": {
+			"project2": "src/"
+		}
+	}
+}

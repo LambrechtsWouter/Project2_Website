@@ -1,0 +1,122 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'World Conqueror -  Browse' %}
+{% set css ='/css/home.css' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+<div class="containers" id="content">
+
+  <div class="span12">
+  	<div class="tabbable"> 
+  		<ul class="nav nav-tabs">
+  			<li class="active"><a href="#tab1"  class="tab1" data-toggle="tab">Info Route</a></li>   		
+   		   <li><a class="tab2" data-toggle="tab">Nieuwe locatie</a></li>
+   		   <li><a  class="tab3" data-toggle="tab">Locaties</a></li>
+   		   <li><a  class="tab4" data-toggle="tab">Einde van de Route</a></li>
+  		</ul>
+  		<div class="tab-content">
+  			<div class="tab-pane" id="tab4">
+					<div class="span5">
+					<h3>3. Slottekst van de Route</h3>
+					<dl>
+						<dt>Beschrijving</dt>
+						<dd>
+							<textarea id="name"></textarea>
+						</dd>
+					</dl>
+					 <button class="btn btn-primary pull-right" id="Submit">opslaan</button>
+				</div>
+  			</div>
+  			<div class="tab-pane active" id="tab1">
+  				<div class="span4">
+					<h3>1.Info over de Route</h3>
+					<dl>
+						<dt>Naam van de route</dt>
+						<dd>
+							<input type="text" id="RouteName"></input></dd>
+						<dt>Locatie van de route</dt>
+						<dd><input type="text" id="location"></input></dd>
+						<dt>Provincie</dt>
+						<dd><select id="prov">
+						  <option value="1">Oost-Vlaanderen</option>
+                          <option value="2">West-Vlaanderen</option>
+                          <option value="3">Vlaams-brabant</option>
+                          <option value="4">Antwerpen</option>
+                          <option value="5">Limburg</option>
+                          </select>
+                        </dd>
+					</dl>
+				</div>
+					<div class="span8">
+					<h3>2. beschrijving van de Route</h3>
+					<dl>
+						<dt>Beschrijving</dt>
+						<dd>
+							<textarea id="description"></textarea>
+						</dd>
+					</dl>
+				</div>
+				<button class="btn btn-primary pull-left" id="Volgende">Volgende Stap</button>
+  			</div>
+	   		<div class="tab-pane" id="tab3">
+				<div class="span11">
+	    		 <table class="table table-striped" name="table" id="table">
+			        <thead>  
+			          <tr>  
+			            <th></th>  
+			            <th>Locatie</th>  
+			            <th>Lat/lng</th> 
+			            <th>Tekst aangekomen</th>  
+			          </tr>  
+			        </thead>  
+			        <tbody id="table">  
+			      
+			         </tbody> 
+			       </table>
+			       <p id="points"></p>
+			       <p></p>
+			        <button class="btn btn-primary pull-left tab2" >Nieuwe Locatie</button>
+			        <button class="btn btn-primary pull-right tab5" id="next" >Volgende</button>
+			       </div>
+			       <div class="span9 map">
+					 <div id="map_canvas"></div>
+			 	 </div>
+			 	 <div class="span2">
+					 <p id="total"></p>
+					 <p id="duration"></p>
+			 	 </div>
+	    	</div>
+	    	<div class="tab-pane" id="tab2">
+	      		<div class="span6">
+					<h3>Maak nieuwe locatie aan</h3>
+					<dl>
+						<dt>Adres + huisnr</dt>
+						<dd>
+							<input type="text" id="adres"></input></dd>
+						<dt>Gemeente</dt>
+						<dd><input type="text" id="gemeente"></input></dd>
+						<dt> </dt>
+						<dd>
+						<textarea id="arrived" style="width:100%;height:40%;">een tekstje als de gebruiker aankomt op de locatie</textarea>
+						</dd>
+					</dl>
+					
+					<button class="btn btn-primary pull-right" id="btnExercise1" type="button">Toon Google Streetview</button>
+					<button class="btn btn-primary pull-left" id="btnSubmit" type="button">Save locatie</button>
+				</div>
+				<div class="span6" id="view" >
+					<img align="center" id="streetview" src="http://maps.googleapis.com/maps/api/streetview?size=600x450&location=50.97382,3.95813&heading=151.78&pitch=-0.76&sensor=false">  
+				</div>
+	   		</div>
+  		</div>
+	</div>
+	
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}

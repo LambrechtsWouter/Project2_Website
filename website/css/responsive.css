@@ -1,0 +1,69 @@
+@media (max-width: 481px){
+	.brand{
+		width: 100%;
+		text-align:center;
+	}
+	#phonegap{
+		height: 0%;
+		width: 0%;
+	}
+	#content{
+		margin-top: 17%;
+	}
+
+	.user{
+		width: 0%;
+	}
+	.app {
+		width: 40%;
+	}
+	.app h3{
+		font-size: 1.4em;
+	}
+	#register{
+		width: 100%;
+	}
+	.imagesRoute{
+		width:0%;
+		height:0%;
+	}
+	canvas{
+			width:0%;
+		height:0%;
+	}
+	.infoRoute{
+		width: 97%;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 830px){
+	#register{
+		width: 100%;
+	}
+	#phonegap{
+		height: 0%;
+		width: 0%;
+	}
+	.container {
+    	margin-top: 5%;
+	}
+	#content {
+    	margin-top: 5%;
+	}
+	.app {
+		width: 70%;
+	}
+	.app h3{
+		font-size: 1.4em;
+	}
+	li#bottom {
+		width: 115px;
+	}
+	
+	.route {
+		width: 100%;
+	}
+	.info{
+		width: 100%;
+	}
+
+}

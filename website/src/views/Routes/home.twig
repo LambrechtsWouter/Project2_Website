@@ -1,0 +1,27 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'World Conqueror -  Browse' %}
+{% set css ='/css/home.css' %}
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+<div class="containers" id="content">
+  	<div class="span12">
+  		<select class="pull-left">
+  		<option class="btn-primary" value="0">Alle Routes</option>
+  		 <option value="1">Oost-Vlaanderen</option>
+                          <option value="2">West-Vlaanderen</option>
+                          <option value="3">Vlaams-brabant</option>
+                          <option value="4">Antwerpen</option>
+                          <option value="5">Limburg</option>
+  		</select>
+ 		<a class="btn btn-primary pull-right" href="./newRoute" type="button">Maak een nieuwe Route</a>
+   	</div>
+ 	<div class="routes">
+ 	</div>
+ </div>
+
+{% endblock %}
